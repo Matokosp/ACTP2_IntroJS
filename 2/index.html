@@ -12,8 +12,59 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style type="text/css">
+    	h1 {
+    		font-family: sans-serif;
+    		text-transform: uppercase;
+    		font-weight: 700;
+    	}
+    	.galeria {
+    		display: block;
+    		margin: 10vh auto;
+    		text-align: center;
+    		width: 80vw;
+    	}
+
+    	img {
+    		max-width: 20vw;
+    		height: 20vw;
+    		-webkit-filter: grayscale(100%);
+		    -moz-filter:    grayscale(100%);
+		    -ms-filter:     grayscale(100%);
+		    -o-filter:      grayscale(100%);
+		    transition: 1s;
+    	}
+
+    	.img-color {
+    		-webkit-filter: grayscale(10%);
+		    -moz-filter:    grayscale(10%);
+		    -ms-filter:     grayscale(10%);
+		    -o-filter:      grayscale(10%);
+    	}
+
+    </style>
   </head>
   <body>
+  	<div class="galeria">
+  		<h1>Segundo desafío JS - 2</h1>
+  		<img src="../images/1.jpg">
+  		<img src="../images/2.jpg">
+  		<img src="../images/3.jpg">
+  		<img src="../images/4.jpg">
+  		<img src="../images/3.jpg">
+  		<img src="../images/2.jpg">
+  		<img src="../images/4.jpg">
+  		<img src="../images/1.jpg">
+  		<img src="../images/3.jpg">
+  	</div>
 
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  	<script>
+  		$(document).ready(function(){
+  			$("img").on("click", function (){
+  				$(this).toggleClass("img-color")
+  			})
+  		});  		
+  	</script>
   </body>
 </html>
