@@ -10,8 +10,48 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style type="text/css">
+    	h1 {
+    		font-family: sans-serif;
+    		text-transform: uppercase;
+    		font-weight: 900;
+    	}
+    	.galeria {
+    		display: block;
+    		margin: 10vh auto;
+    		text-align: center;
+    		width: 80vw;
+    	}
+
+    	.galeria > img {
+    		max-width: 20vw;
+    		height: 20vw;
+    	}
+    </style>
   </head>
-  <body>
+  <body>  	
+  	<div class="galeria">
+  		<h1>Segundo desafio JS - 1</h1>
+  		<img src="images/1.jpg">
+  		<img src="images/2.jpg">
+  		<img src="images/3.jpg">
+  		<img src="images/4.jpg">
+  		<img src="images/3.jpg">
+  		<img src="images/2.jpg">
+  		<img src="images/4.jpg">
+  		<img src="images/1.jpg">
+  		<img src="images/3.jpg">
+  	</div>
+
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  	<script>
+  		$(document).ready(function(){
+  			alert("DOM CARGADO");
+  			$(window).on("load", function () {
+  				alert("IMAGENES CARGADAS!");
+  			});  			
+		});
+  	</script>
 
   </body>
 </html>
